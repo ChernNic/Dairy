@@ -1,0 +1,46 @@
+﻿<Window x:Class="Dairy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dairy"
+        mc:Ignorable="d"
+        MinHeight="700" MinWidth="450"
+        Height="700" Width="650"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Border Background="WhiteSmoke"
+            CornerRadius="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+                <RowDefinition Height="75"/>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox Height="35"
+                         VerticalAlignment="Center"
+                         Grid.Column="0"
+                         Style="{StaticResource CoolTextbox}" 
+                         Margin="5,0,5,0">
+                </TextBox>
+                
+                <Button Grid.Column="2"
+                        Style="{StaticResource CreateBtn}" RenderTransformOrigin="42.388,12.754" >
+                    <Image Source="Assets\plus42.png" Height="35"></Image>
+                </Button>
+                
+            </Grid>
+
+        </Grid>
+    </Border>
+</Window>
