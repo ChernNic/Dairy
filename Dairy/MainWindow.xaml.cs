@@ -1,6 +1,5 @@
 ﻿using Dairy.Models;
 using System;
-
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
