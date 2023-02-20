@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Николай\OneDrive\Рабочий стол\C# Projects\Dairy\Dairy\obj\Debug\
+C:\Users\chern\Desktop\Dairy\Dairy\obj\Debug\
 Dairy
 none
 false
 DEBUG;TRACE
-C:\Users\Николай\OneDrive\Рабочий стол\C# Projects\Dairy\Dairy\App.xaml
-3-167869645
+C:\Users\chern\Desktop\Dairy\Dairy\App.xaml
+5182803783
 
-81523193229
-13-1310406943
-MainWindow.xaml;Styles\CreateBtnStyle.xaml;Styles\TextBoxStyle.xaml;
+8-416988428
+14774465182
+MainWindow.xaml;Styles\CreateBtnStyle.xaml;Styles\DatePickerStyle.xaml;Styles\TextBoxStyle.xaml;Styles\TopPanelBtnStyle.xaml;
 
-True
+False
 

@@ -8,6 +8,8 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles/TextBoxStyle.xaml"/>
                 <ResourceDictionary Source="Styles/CreateBtnStyle.xaml"/>
+                <ResourceDictionary Source="Styles/TopPanelBtnStyle.xaml"/>
+                <ResourceDictionary Source="Styles/DatePickerStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
