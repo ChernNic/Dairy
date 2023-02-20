@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dairy"
         mc:Ignorable="d"
-        MinHeight="700" MinWidth="450"
+        MinHeight="700" MinWidth="570"
         Height="700" Width="650"
         WindowStyle="None"
         ResizeMode="CanResizeWithGrip"
@@ -16,31 +16,95 @@
             CornerRadius="10">
         <Grid>
             <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
                 <RowDefinition Height="75"/>
                 <RowDefinition/>
-                <RowDefinition Height="75"/>
             </Grid.RowDefinitions>
 
-            <Grid>
+            <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="14*"/>
+                    <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBox Height="35"
-                         VerticalAlignment="Center"
-                         Grid.Column="0"
-                         Style="{StaticResource CoolTextbox}" 
-                         Margin="5,0,5,0">
-                </TextBox>
-                
+                <TextBlock Grid.Column="0" Text="Dairy" FontWeight="Bold" Foreground="#6b9080" FontSize="21" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0">
+
+                </TextBlock>
+
+                <Button Grid.Column="3"
+                        x:Name="CloseBtn"
+                        Style="{StaticResource TopPanelBtn}"
+                        Background="#FFFF5858"
+                        HorizontalAlignment="Right"
+                        Margin="0,0,5,0"
+                        Click="CloseBtn_Click">X</Button>
+
                 <Button Grid.Column="2"
-                        Style="{StaticResource CreateBtn}" RenderTransformOrigin="42.388,12.754" >
-                    <Image Source="Assets\plus42.png" Height="35"></Image>
-                </Button>
-                
+                        x:Name="MinBtn"
+                        Style="{StaticResource TopPanelBtn}"
+                        Background="#f9ab55"  
+                        HorizontalAlignment="Right"
+                        Margin="0,0,35,0"
+                        Click="MinBtn_Click">-</Button>
+
+                <Button Grid.Column="1"
+                        x:Name="FullScreenBtn"
+                        Style="{StaticResource TopPanelBtn}"
+                        Background="#99d98c"
+                        HorizontalAlignment="Right"
+                        Margin="0,0,65,0"
+                        Click="FullScreenBtn_Click"></Button>
+
             </Grid>
 
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="9*" />
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <DatePicker x:Name="Date"
+                            Height="35"
+                            Grid.Column="0"
+                            HorizontalAlignment="Stretch" 
+                            VerticalAlignment="Center" 
+                            Grid.Row="2" 
+                            Style="{DynamicResource DatePickerStyle1}" 
+                            SelectedDateFormat="Short" 
+                            SelectedDateChanged="Date_SelectedDateChanged"/>
+
+                <Button x:Name="CreateBtn"
+                        Click="CreateBtn_Click"
+                        Grid.Column="2"
+                        Style="{StaticResource CreateBtn}"
+                        HorizontalAlignment="Right">
+                    <Image Source="Assets\plus42w.png" Height="35"></Image>
+                </Button>
+                
+                <Button x:Name="DeleteBtn"
+                        Click="DeleteBtn_Click"
+                        Grid.Column="1"
+                        Background="#BD4C4C"
+                        Style="{StaticResource CreateBtn}"
+                        HorizontalAlignment="Right"
+                        Margin="0,0,60,0">
+                    <Image Source="Assets\Delete.png" Height="35"></Image>
+                </Button>
+            </Grid>
+
+            <DataGrid Grid.Row="2" 
+                      x:Name="Notes" 
+                      FontSize="18"
+                      FontWeight="Bold"
+                      Foreground="#6b9080" 
+                      Margin="0,0,0,25"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Path = Title}" Header="Title" Width="1*"/>
+                    <DataGridTextColumn Binding="{Binding Path = Text}" Header="Text" Width="4*"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </Grid>
     </Border>
 </Window>

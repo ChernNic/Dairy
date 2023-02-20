@@ -9,7 +9,7 @@
                             Background="#a4c3b2">
                         <Grid>
                             <TextBox Margin="3"
-                                     Text="{TemplateBinding Text}"
+                                     Text=""
                                      BorderThickness = "0"
                                      Background="Transparent"
                                      VerticalContentAlignment="Center"
