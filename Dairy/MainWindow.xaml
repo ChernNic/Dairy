@@ -10,8 +10,10 @@
         WindowStyle="None"
         ResizeMode="CanResizeWithGrip"
         Background="Transparent"
-        AllowsTransparency="True">
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown">
 
+    
     <Border Background="WhiteSmoke"
             CornerRadius="10">
         <Grid>
@@ -20,7 +22,6 @@
                 <RowDefinition Height="75"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="14*"/>
